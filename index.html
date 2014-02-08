@@ -2,6 +2,15 @@
 <head>
 <meta name="robots" content="noindex"/>
 <link rel="stylesheet" href="static/style.css"/>
+<script type="application/javascript">
+document.addEventListener("DOMContentLoaded", function () {
+  Array.prototype.slice.call(document.images).map(function (i) {
+    i.addEventListener("load", function () {
+      if ( i.height == 200 ) i.className = "portrait";
+    });
+  });
+});
+</script>
 </head>
 <body>
 <h2>Images</h2>
@@ -96,6 +105,5 @@
 <li><a href='static/IMG_20140107_133744.jpg'><img src='static/TN_IMG_20140107_133744.jpg' /><div><p>133744</p></div></a></li>
 <li><a href='static/IMG_20140107_160044.jpg'><img src='static/TN_IMG_20140107_160044.jpg' /><div><p>160044</p></div></a></li>
 </ul>
-<script>Array.prototype.slice.call(document.images).map(function (i) { i.onload = function () { if ( i.height == 200 ) i.className = "portrait" }});</script>
 </body>
 </html>
