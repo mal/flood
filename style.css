@@ -36,6 +36,7 @@ div {
   width: 100%;
 }
 img.portrait + div {
+  -webkit-transform: rotate(270deg);
   transform: rotate(270deg);
 }
 section {
